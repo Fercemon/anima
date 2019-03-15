@@ -131,7 +131,8 @@ header {
 main {
     position: relative;
     height: 100%;
-    width: 100vw;
+    width: 100%;
+    padding: 0 1em;
     /*
     overflow-y: auto;
     overflow-x: hidden;
@@ -142,9 +143,7 @@ main {
 
 
 .solutions {
-    margin: 0 1em;
     position: relative;
-    height: auto;
     /* ensure children exist in 3D planes
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;*/
@@ -155,7 +154,7 @@ main {
 
 .parallax {
     position: absolute;
-    top: 35em;
+    top: -12em;
     left: -10em;
     height: 30em;
     /*
@@ -202,6 +201,26 @@ main {
 
 .standars-item {
     margin: 1em;
+}
+
+.video{
+    position: relative;
+    height: 0;
+    width: 90%;
+    padding-bottom: 56.25%;
+    padding-top: 25PX;
+    margin: 2em auto;
+
+}
+
+
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* circle chart animation */
@@ -299,7 +318,7 @@ main {
 /* animation percentage */
 
 .dash {
-    animation: dash 2s ease-in-out both;
+    animation: dash 2s 1s ease-in-out both;
 }
 
 @keyframes dash {
@@ -308,7 +327,7 @@ main {
     }
 
     to {
-        stroke-dashoffset: 157;
+        stroke-dashoffset: 457;
     }
 }
 
@@ -340,7 +359,173 @@ main {
     width: 70%;
     margin: 0 auto;
     padding: 1em;
+    cursor: pointer;
 }
 
+.contact{
+margin: 0 4em;
+padding-bottom: 2em;
+}
+
+.contact-icon{
+    width: 100%;
+    height: 13em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    margin: 2em 0;
+    background-color: #f7f7f7;
+    text-align: center;
+    cursor: pointer;
+}
+
+.far{
+    margin-top: 0.4em;
+    font-size: 5em;
+    color: #001826;
+}
+
+.contact-p{
+    color: #ED7E70;
+    font-weight: 700;
+    padding-top: 1.5em;
+}
+
+@media only screen and (min-width: 1000px){
+
+    header{
+        height: 6em;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+
+    .desk-nav {
+    display: grid;
+        grid-template-columns: 5(1fr);
+        grid-template-areas:
+            "home about logo campaign contact";
+        text-align: center;
+        line-height: 6em;
+}
+
+    .home{
+        grid-area: home;
+    }
+
+    .about{
+        grid-area: about;
+    }
+
+    .logo{
+        grid-area: logo;
+        position: relative;
+        height: 5em;
+    }
+
+    .campaign{
+        grid-area: campaign;
+    }
+
+    .contact{
+        grid-area: contact;
+    }
+
+    .desk-nav a{
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+    main{
+        padding: 0;
+    }
+
+    .solutions{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 0.2fr 1fr;
+        grid-template-areas:
+            "solutions-h1 solutions-h1"
+            "h2 h2"
+            "video standars-list";
+        padding: 0 10em;
+    }
+
+    .solutions-h1{
+        grid-area: solutions-h1;
+        font-size: 4vw;
+        margin-top: 1.7em;
+    }
+
+    .h2{
+        grid-area: h2;
+        font-size: 3vw;
+        margin-top: 0;
+    }
+
+    .standars-list{
+        grid-area: standars-list;
+    }
+
+    .video{
+        margin: 0 auto;
+    }
+
+    .stadistics{
+        height: auto;
+    }
+
+    .media{
+        margin-top: 4em;
+    }
+
+    .media-imgs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "img1 img2 img3";
+        padding: 0 10em;
+
+    }
+
+    .img1{
+        grid-area: img1;
+    }
+
+    .img2{
+        grid-area: img2;
+    }
+
+    .img3{
+        grid-area: img3;
+    }
+
+    .media-background{
+        height: 30em;
+        -webkit-clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+    }
+
+    .contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "fa-envelope fa-handshake fa-file-alt";
+        padding: 0 10em;
+        column-gap: 2em;
+    }
+
+    .fa-envelope{
+        grid-area: fa-envelope;
+    }
+
+    .fa-handshake{
+        grid-area: fa-handshake;
+    }
+
+    .fa-file-alt{
+        grid-area: fa-file-alt;
+    }
 
 
+
+}
