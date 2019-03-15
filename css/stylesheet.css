@@ -243,6 +243,10 @@ iframe{
     }
 }
 
+.stadistics{
+    text-align: center;
+}
+
 .circleChart {
     position: relative;
     width: 250px;
@@ -288,22 +292,22 @@ iframe{
 
 .stick-circle {
     fill: none;
-    stroke: #9f9a9a;
-    stroke-width: 4;
+    stroke: rgba(159, 154, 154, 0.4);
+    stroke-width: 8;
 }
 
 
 .percentage {
     fill: none;
     stroke: #ED7E70;
-    stroke-width: 4;
+    stroke-width: 6;
     stroke-dasharray: 627.31;
 
 }
 
 #back-circle {
     fill: #aaa9a9;
-    stroke-width: 4;
+    stroke-width: 6;
     stroke: #aaa9a9;
 }
 
@@ -362,10 +366,15 @@ iframe{
     cursor: pointer;
 }
 
+.media-img:hover{
+    transform: scale(1.1);
+}
+
 .contact{
 margin: 0 4em;
 padding-bottom: 2em;
 }
+
 
 .contact-icon{
     width: 100%;
@@ -375,6 +384,10 @@ padding-bottom: 2em;
     background-color: #f7f7f7;
     text-align: center;
     cursor: pointer;
+}
+
+.contact-icon:hover{
+    transform: scale(1.1);
 }
 
 .far{
@@ -458,7 +471,7 @@ padding-bottom: 2em;
 
     .h2{
         grid-area: h2;
-        font-size: 3vw;
+        font-size: 2vw;
         margin-top: 0;
     }
 
