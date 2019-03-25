@@ -7,7 +7,15 @@ const length = percentage.getTotalLength();
 const actualLength = length / 100 * 25;
 const percentageText = actualLength * 100 / length + "%";
 const scrollBtn = document.querySelector(".scroll-down");
+const overlayA = document.querySelector(".overlay");
 
+overlayA.addEventListener("click", () => {
+    document.querySelector(".overlay").style.height = "0";
+    count++;
+});
+
+
+document.body.style.scrollBehavior = "smooth";
 
 // button to scroll to about section
 scrollBtn.addEventListener("click", () => {
@@ -105,6 +113,7 @@ function scrollFunction() {
    document.querySelector("header").style.background = "transparent";
   }
 }
+
 
 /*
 function setupStuffs() {
