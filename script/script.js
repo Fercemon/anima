@@ -1,6 +1,6 @@
 const burgerMenu = document.querySelector(".menu");
 const elemHidden = document.querySelectorAll(".hidden");
-const windowHight = window.innerHeight;
+const windowHeight = window.innerHeight;
 const percentage = document.querySelector(".percentage");
 const fadeIn = document.querySelector(".fade-in");
 const length = percentage.getTotalLength();
@@ -8,19 +8,25 @@ const actualLength = length / 100 * 25;
 const percentageText = actualLength * 100 / length + "%";
 const scrollBtn = document.querySelector(".scroll-down");
 
+
+// button to scroll to about section
 scrollBtn.addEventListener("click", () => {
     window.scrollBy({
-        top: windowHight,
+        top: windowHeight,
         behavior: 'smooth'
     });
 });
 
+
+// to get the real vh in all devices
 window.addEventListener('resize', () => {
     let vh = windowHight * 0.01;
 
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+
+// to display and not display the overlay for mobile nav
 let count = 1;
 burgerMenu.addEventListener("click", () => {
     count++;
@@ -33,17 +39,18 @@ burgerMenu.addEventListener("click", () => {
 });
 
 
+// to get the circles chart when are visibles in the viewport
 window.addEventListener("scroll", () => {
 
     for (var i = 0; i < elemHidden.length; i++) {
         let positionFromTop = elemHidden[i].getBoundingClientRect().top;
-        if (positionFromTop - windowHight <= 0) {
+        if (positionFromTop - windowHeight <= 0) {
             elemHidden[i].className = elemHidden[i].className.replace(
                 'hidden',
                 'fade-in'
             );
             dashoffset();
-            console.log(windowHight);
+            console.log(windowHeight);
         };
     }
 
@@ -81,6 +88,22 @@ function scroll() {
     by some value. I use 2, which means that for every two pixels
     the main content moves, the image moves one*/
     parallax.style.marginTop = (offset / 2) - initOffset + "px";
+
+
+    // call the function that we set below
+    scrollFunction()
+}
+
+
+
+// set background on the nav when windows scroll > 100vh
+
+function scrollFunction() {
+  if (document.body.scrollTop > windowHeight || document.documentElement.scrollTop > windowHeight) {
+    document.querySelector("header").style.background = "black";
+  } else {
+    document.querySelector("header").style.background = "transparent";
+  }
 }
 
 /*

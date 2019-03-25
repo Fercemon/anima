@@ -1,6 +1,7 @@
 /* links for fonts */
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Subrayada:400,700|Montserrat:400,600,700');
 
 
 /* General settings */
@@ -11,11 +12,19 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 
 a {
     text-decoration: none;
     cursor: pointer;
+}
+
+h1 {
+    font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 
@@ -27,7 +36,7 @@ header {
     left: 0;
     width: 100%;
     height: 4em;
-    background: rgba(0, 0, 0, 0.2);
+    background: transparent;
     z-index: 2;
 }
 
@@ -70,7 +79,11 @@ header {
 /* Home screen */
 
 .home-screen {
-    background-image: url(../img/fish.jpg);
+    background-image: linear-gradient(
+     to right bottom,
+     rgba(235, 235, 235, 0.4),
+     rgba(56, 56, 56, 0.4)),
+      url(../img/fish.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -405,7 +418,7 @@ padding-bottom: 2em;
 @media only screen and (min-width: 1000px){
 
     header{
-        height: 6em;
+        height: auto;
     }
 
     .mobile-nav{
@@ -416,9 +429,8 @@ padding-bottom: 2em;
     display: grid;
         grid-template-columns: 5(1fr);
         grid-template-areas:
-            "home about logo campaign contact";
+            "home about logo-container campaign contact";
         text-align: center;
-        line-height: 6em;
 }
 
     .home{
@@ -429,9 +441,14 @@ padding-bottom: 2em;
         grid-area: about;
     }
 
-    .logo{
-        grid-area: logo;
+    .logo-container{
+        grid-area: logo-container;
         position: relative;
+    }
+
+    .logo{
+        position: absolute;
+        top: 3.5em;
         height: 5em;
     }
 
@@ -443,13 +460,35 @@ padding-bottom: 2em;
         grid-area: contact;
     }
 
+
     .desk-nav a{
         color: #fff;
-        font-size: 1.5em;
+        font-size: 1em;
+        text-transform: uppercase;
+        padding: 2em 0 0.5em 0;
+    }
+
+    .desk-nav a:hover::after{
+        content: " ";
+        border-bottom: 2px solid #ed7e70;
+        display: block;
+        width: 0;
+        margin: auto;
+        animation: subline .6s ease-in-out both;
+    }
+
+    @keyframes subline{
+        to{
+            width: 3em;
+        }
     }
 
     main{
         padding: 0;
+    }
+
+    .slogan{
+        font-size: 5vw;
     }
 
     .solutions{
@@ -463,11 +502,17 @@ padding-bottom: 2em;
         padding: 0 10em;
     }
 
+    .parallax{
+        height: 55em;
+    }
+
     .solutions-h1{
         grid-area: solutions-h1;
         font-size: 4vw;
         margin-top: 1.7em;
     }
+
+
 
     .h2{
         grid-area: h2;
