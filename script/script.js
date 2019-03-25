@@ -100,9 +100,9 @@ function scroll() {
 
 function scrollFunction() {
   if (document.body.scrollTop > windowHeight || document.documentElement.scrollTop > windowHeight) {
-    document.querySelector("header").style.background = "black";
+    document.querySelector("header").style.background = "#273352";
   } else {
-    document.querySelector("header").style.background = "transparent";
+   document.querySelector("header").style.background = "transparent";
   }
 }
 
