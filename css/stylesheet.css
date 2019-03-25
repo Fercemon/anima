@@ -431,7 +431,7 @@ padding-bottom: 2em;
 
     .desk-nav {
     display: grid;
-        grid-template-columns: 5(1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-template-areas:
             "home about logo-container campaign contact";
         text-align: center;
