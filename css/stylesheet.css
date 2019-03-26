@@ -240,6 +240,15 @@ iframe{
     border: 0;
 }
 
+.gallery-btn{
+    display: block;
+    margin: 0 auto;
+    background: #ED7E70;
+    border: none;
+    box-shadow: black;
+    padding: 0.5em 1em;
+}
+
 /* circle chart animation */
 
 .hidden {
