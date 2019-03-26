@@ -150,24 +150,10 @@ main {
     height: 100%;
     width: 100%;
     padding: 0 1em;
-    /*
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-perspective: 1px;
-    perspective: 1px;*/
 }
 
 
-
-.solutions {
-    position: relative;
-    /* ensure children exist in 3D planes
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;*/
-
-}
-
-
+/* about section with the solutions */
 
 .parallax {
     position: absolute;
@@ -247,6 +233,90 @@ iframe{
     border: none;
     box-shadow: black;
     padding: 0.5em 1em;
+}
+
+.model{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+    text-align: center;
+    padding: 8em;
+}
+
+.model-content{
+    position: relative;
+    width: 100%;
+    background: #fff;
+}
+
+.model-content h2{
+    padding: 1em 0;
+}
+
+.model-imgs{
+    width: 50%;
+    margin: auto;
+    padding-bottom: 2em;
+
+}
+
+.model-imgs img{
+    width: 100%;
+}
+
+.mySlides{
+    display: none;
+}
+
+.next, .prev {
+    position: absolute;
+    top: 50%;
+    color: #000;
+    padding: 0 1em;
+}
+
+.next{
+    right: 0;
+}
+
+.prev{
+    left: 0;
+}
+
+.close{
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    font-size: 2em;
+}
+
+.next:hover,
+.prev:hover,
+.close:hover {
+    transform: scale(1.3);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 /* circle chart animation */
@@ -507,11 +577,12 @@ padding-bottom: 2em;
     .solutions{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.5fr 0.2fr 1fr;
+        grid-template-rows: 0.5fr 0.2fr 1fr 0.2fr;
         grid-template-areas:
             "solutions-h1 solutions-h1"
             "h2 h2"
-            "video standars-list";
+            "video standars-list"
+            "video gallery-btn";
         padding: 0 10em;
     }
 
@@ -538,7 +609,13 @@ padding-bottom: 2em;
     }
 
     .video{
+        grid-area: video;
         margin: 0 auto;
+    }
+
+    .gallery-btn{
+        grid-area: gallery-btn;
+        height: 3em;
     }
 
     .stadistics{
