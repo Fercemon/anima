@@ -154,11 +154,41 @@ function showSlides(n) {
 }
 
 
+// open and close form for petitions
+
+document.querySelector(".petition-form").addEventListener("click", () => {
+    document.querySelector("#model2").style.display = "block";
+});
+
+document.querySelector("#close-pet").addEventListener("click", () => {
+    document.querySelector("#model2").style.display = "none";
+});
+
+
+// open and close form for newsletters
 
 
 
+document.querySelector(".newsletter").addEventListener("click", () => {
+    document.querySelector("#model3").style.display = "block";
+});
+
+document.querySelector("#close-news").addEventListener("click", () => {
+    document.querySelector("#model3").style.display = "none";
+});
 
 
+// open and close form for member
+
+
+
+document.querySelector(".member").addEventListener("click", () => {
+    document.querySelector("#model4").style.display = "block";
+});
+
+document.querySelector("#close-mem").addEventListener("click", () => {
+    document.querySelector("#model4").style.display = "none";
+});
 
 
 

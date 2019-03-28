@@ -7,6 +7,7 @@
     <title>Anima</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
 </head>
 
 <body>
@@ -56,20 +57,21 @@
 
             <h1 class="solutions-h1">WHAT ARE WE UP TO?</h1>
 
-            <h2 class="solutions-h2 h2">Did you know?</h2>
+            <h2 class="solutions-h2 h2"></h2>
 
             <ul class="standars-list">
-                <li class="standars-item">Research has shown that fish feel pain and stress?</li>
+               <li class="standars-item changes">Did you know?</li>
+                <li class="standars-item">Research has shown that fish feel pain and stress.</li>
                 <li class="standars-item">Farmed salmon is grey in color? The pink color and fish smell are artificially added.</li>
                 <li class="standars-item">Imported shrimp is often filthy, containing:
                     <ul class="shrims-list">
                         <li>antibiotics</li>
                         <li>chemical residues</li>
                         <li>mouse/rat hair</li>
-                        <li>pieces of insects?</li>
+                        <li>pieces of insects</li>
                     </ul>
                 </li>
-                <li class="standars-item">According to WWF 90% of the ocean’s large fish have already been fished out?</li>
+                <li class="standars-item">According to WWF 90% of the ocean’s large fish have already been fished out.</li>
 
                 <li class="standars-item">Are you as shocked as we are? Be part of the change, sign our petition.</li>
             </ul>
@@ -85,7 +87,7 @@
                     <h2>GALLERY</h2>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    <a class="close" onclick="plusSlides(1)">&times;</a>
+                    <a class="close">&times;</a>
 
                     <div class="model-imgs">
                         <div class="mySlides fade">
@@ -136,9 +138,9 @@
 
         <section class="stadistics" id="campaign">
 
-            <h2 class="solutions-h2">Sign up for fish</h2>
+            <h2 class="solutions-h2">Support us</h2>
             <p>Did you know that there is no legal requirements for the humane slaughter of fish?</p>
-            <p class="changes"> We at Anima want to change that.</p>
+            <p class="changes"> We at Anima want to change that!</p>
             <p>Only together with you we can achieve tremendous results to improve the conditions in which fish are killed. No more ice, salt or ammonia baths, no more air asphyxiate and no more Co2 narcosis.</p>
             <p>
                 Add your voice to our petition and make sure that fish in aquaculture as well as wild fish have a better life.</p>
@@ -169,7 +171,12 @@
 
         <section class="media-container">
 
-            <h2 class="solutions-h2">Follow us in our media platforms</h2>
+            <h2 class="solutions-h2">Follow us</h2>
+
+            <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
 
             <div class="media">
                 <div class="media-background"></div>
@@ -186,15 +193,15 @@
             <h2 class="solutions-h2">Join us</h2>
 
             <div class="contact">
-                <div class="contact-icon">
+                <div class="contact-icon newsletter">
                     <i class="far fa-envelope"></i>
                     <p class="contact-p">Newsletter</p>
                 </div>
-                <div class="contact-icon">
+                <div class="contact-icon member">
                     <i class="far fa-handshake"></i>
                     <p class="contact-p">Become member</p>
                 </div>
-                <div class="contact-icon">
+                <div class="contact-icon petition-form">
                     <i class="far fa-file-alt"></i>
                     <p class="contact-p">Petitions</p>
                 </div>
@@ -203,14 +210,48 @@
 
             <div class="model" id="model2">
                 <div class="model-content">
+                   <a class="close" id="close-pet">&times;</a>
                     <h2>Sign up for our petition</h2>
 
-                    <p>Only together with you we can achieve tremendous results to improve the conditions in which fish are killed. No more ice, salt or ammonia baths, no more air asphyxiate and no more Co2 narcosis.</p>
+                    <p class="petitions-text">Only together with you we can achieve tremendous results to improve the conditions in which fish are killed. No more ice, salt or ammonia baths, no more air asphyxiate and no more Co2 narcosis.</p>
 
                     <form action="">
-                        <input type="text"  placeholder="Write your name"><br>
-                        <input type="text"  placeholder="Write your mail"><br>
-                        <input type="submit">
+                       Name: <input type="text"  placeholder="Name"><br>
+                       E-mail: <input type="text"  placeholder="Mail"><br>
+                        <input type="submit" value="sign up" class="btn">
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="model" id="model3">
+                <div class="model-content">
+                   <a class="close" id="close-news">&times;</a>
+                    <h2>Sign up for our Newsletter</h2>
+
+                    <p class="petitions-text">Are you are interested in what we do? Do you want to be uptaded about how this campaign goes? <strong>DON'T HESITATE</strong> Sign up to receive our newsletter</p>
+
+                    <form action="">
+                       Name: <input type="text"  placeholder="Name"><br>
+                       E-mail: <input type="text"  placeholder="Mail"><br>
+                        <input type="submit" value="Sign up" class="btn">
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="model" id="model4">
+                <div class="model-content">
+                   <a class="close" id="close-mem">&times;</a>
+                    <h2>Become a member</h2>
+
+                    <p class="petitions-text">Do you like what we are up to? Do you want to be part and contribute with this campaign? <strong>BECOME A MEMBER</strong> with your help we can achieve tremendous results</p>
+
+                    <form action="">
+                       Name: <input type="text"  placeholder="Name"><br>
+                       E-mail: <input type="text"  placeholder="Mail"><br>
+                       Password: <input type="password"  placeholder="Password" maxlength="10"><br>
+                        <input type="submit" value="Sign up" class="btn">
                     </form>
 
                 </div>
