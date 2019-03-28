@@ -28,7 +28,7 @@ scrollBtn.addEventListener("click", () => {
 
 // to get the real vh in all devices
 window.addEventListener('resize', () => {
-    let vh = windowHight * 0.01;
+    let vh = windowHeight * 0.01;
 
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
