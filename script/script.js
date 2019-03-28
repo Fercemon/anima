@@ -120,12 +120,12 @@ function scrollFunction() {
 
 //open model
 document.querySelector(".gallery-btn").addEventListener("click", () => {
-    document.querySelector(".model").style.display = "block";
+    document.querySelector("#model").style.display = "block";
 });
 
 //close model
 document.querySelector(".close").addEventListener("click", () => {
-    document.querySelector(".model").style.display = "none";
+    document.querySelector("#model").style.display = "none";
 });
 
 
@@ -152,6 +152,15 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+
+
+
+
+
+
+
+
 
 /*
 function setupStuffs() {

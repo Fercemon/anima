@@ -16,7 +16,7 @@
             <img src="img/logo.png" alt="fish logo" class="logo">
             <div class="overlay">
                 <a href="index.html" class="home">Home</a>
-                <a href="#about" class="about">About</a>
+                <a href="#about" class="about">Purpose</a>
                 <a href="#campaign" class="campaign">Campaign</a>
                 <a href="#contact" class="contact">Contact</a>
             </div>
@@ -25,7 +25,7 @@
         <nav class="desk-nav">
             <div class="logo-container"><img src="img/logo.png" alt="fish logo" class="logo"></div>
             <a href="index.html" class="Home">Home</a>
-            <a href="#about" class="About">About</a>
+            <a href="#about" class="About">Purpose</a>
             <a href="#campaign" class="Campaign">Campaign</a>
             <a href="#contact" class="Contact">Contact</a>
         </nav>
@@ -34,6 +34,11 @@
 
     <section class="home-screen">
         <h1 class="slogan">FUTURE FOR FISH</h1>
+        <div class="video-overlay"></div>
+        <video autoplay muted loop id="myVideo">
+            <source src="videos/Video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
         <div class="scroll-down">
             <div class="triangle-wrapper">
                 <div class="scroll-triangle"></div>
@@ -51,44 +56,76 @@
 
             <h1 class="solutions-h1">WHAT ARE WE UP TO?</h1>
 
-            <h2 class="solutions-h2 h2">We want to raise standards for fish in aquaculture by</h2>
+            <h2 class="solutions-h2 h2">Did you know?</h2>
 
             <ul class="standars-list">
-                <li class="standars-item">demand humane methods of stunning before slaughter.</li>
-                <li class="standars-item">regulate stocking densities to levels that provide better fish welfare.</li>
-                <li class="standars-item">regulate fish transport.</li>
-                <li class="standars-item">invest in research focused on main farming species actual needs, as very little is known about the living conditions for those fishes in terms of their natural behaviour and welfare.</li>
+                <li class="standars-item">Research has shown that fish feel pain and stress?</li>
+                <li class="standars-item">Farmed salmon is grey in color? The pink color and fish smell are artificially added.</li>
+                <li class="standars-item">Imported shrimp is often filthy, containing:
+                    <ul class="shrims-list">
+                        <li>antibiotics</li>
+                        <li>chemical residues</li>
+                        <li>mouse/rat hair</li>
+                        <li>pieces of insects?</li>
+                    </ul>
+                </li>
+                <li class="standars-item">According to WWF 90% of the ocean’s large fish have already been fished out?</li>
+
+                <li class="standars-item">Are you as shocked as we are? Be part of the change, sign our petition.</li>
             </ul>
 
             <div class="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/wm1HRhyTwcA" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uukZ0NF9aG0"  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <button class="gallery-btn">REACTIONS</button>
+            <button class="btn gallery-btn">REACTIONS</button>
 
-            <div class="model">
+            <div class="model" id="model">
                 <div class="model-content">
                     <h2>GALLERY</h2>
-                    <a class="prev"onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     <a class="close" onclick="plusSlides(1)">&times;</a>
 
                     <div class="model-imgs">
                         <div class="mySlides fade">
-                            <img src="img/reactions_Page_2.png" alt="reactions">
+                            <img src="img/reactions_web_1_Page_02.png" alt="reactions">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="img/reactions_web_1_Page_03.png" alt="reactions">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="img/reactions_web_1_Page_04.png" alt="reactions">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="img/reactions_web_1_Page_05.png" alt="reactions">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="img/reactions_web_1_Page_06.png" alt="reactions">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="img/reactions_web_1_Page_07.png" alt="reactions">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="img/reactions_web_1_Page_08.png" alt="reactions">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="img/reactions_web_1_Page_09.png" alt="reactions">
                         </div>
                         <div class="mySlides fade">
-                            <img src="img/reactions_Page_3.png" alt="reactions">
+                            <img src="img/reactions_web_1_Page_10.png" alt="reactions">
                         </div>
                         <div class="mySlides fade">
-                            <img src="img/reactions_Page_4.png" alt="reactions">
+                            <img src="img/reactions_web_1_Page_11.png" alt="reactions">
                         </div>
-                        <div class="mySlides fade">
-                            <img src="img/reactions_Page_5.png" alt="reactions">
-                        </div>
-                        <div class="mySlides fade">
-                            <img src="img/reactions_Page_6.png" alt="reactions">
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -100,8 +137,11 @@
         <section class="stadistics" id="campaign">
 
             <h2 class="solutions-h2">Sign up for fish</h2>
-
-            <p>By signing our petition you help raising fish standards in aquaculture.</p>
+            <p>Did you know that there is no legal requirements for the humane slaughter of fish?</p>
+            <p class="changes"> We at Anima want to change that.</p>
+            <p>Only together with you we can achieve tremendous results to improve the conditions in which fish are killed. No more ice, salt or ammonia baths, no more air asphyxiate and no more Co2 narcosis.</p>
+            <p>
+                Add your voice to our petition and make sure that fish in aquaculture as well as wild fish have a better life.</p>
 
             <div class="circleChart hidden">
                 <div class="circles-container">
@@ -119,11 +159,12 @@
                             <circle id='back-circle' cx='120' cy='120' r='100' />
                         </svg>
 
-                        <p class="percentageT percentage-text">you can check</p>
+                        <p class="percentageT percentage-text">25.000 out of 100.000 Signatures </p>
                     </div>
 
                 </div>
             </div>
+            <button class="btn">ADD YOUR VOICE</button>
         </section>
 
         <section class="media-container">
@@ -158,9 +199,33 @@
                     <p class="contact-p">Petitions</p>
                 </div>
             </div>
+
+
+            <div class="model" id="model2">
+                <div class="model-content">
+                    <h2>Sign up for our petition</h2>
+
+                    <p>Only together with you we can achieve tremendous results to improve the conditions in which fish are killed. No more ice, salt or ammonia baths, no more air asphyxiate and no more Co2 narcosis.</p>
+
+                    <form action="">
+                        <input type="text"  placeholder="Write your name"><br>
+                        <input type="text"  placeholder="Write your mail"><br>
+                        <input type="submit">
+                    </form>
+
+                </div>
+            </div>
+
+
+
         </section>
 
     </main>
+
+    <footer class="footer">
+        <img src="img/Anima_logo3.png" alt="anima logo" class="animaLogo">
+        <p>Copyright Anima <i class="far fa-copyright"></i> 2019</p>
+    </footer>
 
 
 
