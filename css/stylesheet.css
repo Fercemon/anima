@@ -285,11 +285,14 @@ iframe {
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 4;
     text-align: center;
-    padding: 8em;
+    padding: 1em 0;
 }
 
 .model-content {
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     background: #fff;
 }
@@ -299,7 +302,7 @@ iframe {
 }
 
 .model-imgs {
-    width: 50%;
+    width: 60%;
     margin: auto;
     padding-bottom: 2em;
 
@@ -741,6 +744,19 @@ input:placeholder-shown {
         grid-area: gallery-btn;
         height: 3em;
     }
+
+    .model{
+        padding: 0 8em;
+    }
+
+.model-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -47%);
+    width: 100%;
+    background: #fff;
+}
 
     .stadistics {
         height: auto;
